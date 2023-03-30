@@ -7,6 +7,56 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class = "sidenav"> <!--Will be converting this into interactive/collapsable sidebar menu-->
+        <a href="index.html" title="Link to Homepage">Home</a>
+
+        <div class="dropdownNav">
+            <button type="button" class="collapsible">Everyday Tips</button> <!--Want have a link to top of page too somehow-->
+                <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+                    <a href="everyday.html#GarbageDisposalArticle">Garbage Disposal Tips</a>
+                    <a href="everyday.html#ColdWeatherCarTipsArticle">Cold Weather Car Tips</a>
+                </div>
+        </div>
+        <div class="dropdownNav">
+            <button type="button" class="collapsible">Software Tips</button><!--Want have a link to top of page too somehow-->
+                <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+                    <a href="software.html#VSCodeArticle">VS Code Tips</a>
+                    <a href="software.html#7zipArticle">7zip</a>
+                    <a href="software.html#EverythingArticle">Everything File Searcher</a>
+                </div>
+        </div>
+
+    </nav>
+    <div class = "topbar">
+        <span class = "menuicon">&#127828;</span> <!--This will be replaced with a CSS configuration-->
+        <img src="../images/MyAICrabLogo.svg" alt="Crab Logo" style = "width:15px;height:15px;"> <!--TODO: Decide if I should keep. Also remove limiter on image-->
+    </div>
+
+    
+    <div class="Title Header">
+        <h1>Software Tips</h1> <!--Note to Self:Should I change website title?-->
+    </div>
+    <hr>
+
+    <div class="mainArticle">
+        <img src="../images/VSCodeAltShiftDown.png" alt="Garbage disposal">
+        <h3  id="VSCodeArticle">VS code tips</h3>
+        <p>When you are writing a lot of lines of code that are similar and you need to keep copy pasting them, you can use this shortcut. Shift + Alt + Down arrow key will copy the line of code that your text cursor is on and will copy it down. This is particularly usefully when you need to write the same thing again and again but only change a little bit of the code, like writing tables in HTML.</p>
+    </div>
+    <hr>
+    <div class="mainArticle">
+        <img src="../images/7zipFastSpeedIcon.png" alt="7zip icon">
+        <h3  id="7zipArticle">Compressing Files with 7.zip</h3>
+        <p>Tired of waiting forever when zipping up or unzipping files or folders in Windows? They you should try 7.zip. It is an open source software that is much, much faster then the default windows file compressor. It also is needed to unzip any files that you download that has the .7z file extension.</p>
+    </div>
+    <hr>
+    <div class="mainArticle">
+        <img src="../images/EverythingSearch.png" alt="Everything search result">
+        <h3  id="EverythingArticle">Faster File Searching with Everything</h3>
+        <p>If you often using the search feature in file explorer then you know how long it takes for it to actually find the files you are looking for in medium-large folders. Sometimes it can take minutes to find a particular file that installed somewhere weird and you now trying to find it. With the file search engine Everything (which can be found at voidtools.com), it takes less then a second to find any file on your system. Everything can search through every single file on your computer system and return your results in a second.</p>
+    </div>
+
+
     
 </body>
 </html>
