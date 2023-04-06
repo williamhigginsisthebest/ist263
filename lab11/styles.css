@@ -1,0 +1,30 @@
+/*
+a.	Body background color: #8c887e (dark greyish)
+b.	Text color: #f0edeb (whiteish)
+c.	Link color: #ff9b61 (burnt orange)
+d.	Heading color: #2b9fed
+e.	Site Navigation Background: #2a2f78
+f.	Site Navigation Highlight Color: #a61941
+g.	Site Navigation Link Color: #c6c90c
+
+
+*/
+
+body{background-color: #8c887e ;}
+text{color:#060605 ;}
+a {color:#ff9b61;}
+h1, h2 {color :#2a2f78;}
+nav {
+    background-color: #2b9fed;
+    padding: 10px;
+    margin-bottom: 30px;
+    }
+nav a {color:#c6c90c;}
+nav a:hover {background-color:#a61941;}
+
+@media only screen and (max-width: 600px) {
+    nav a {size: 100%;
+    display:block; /* Turns incline into block */
+    padding: 1%;} 
+    nav span {display: none;}
+}

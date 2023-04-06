@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Skills</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {font-size: 1em;}
+            table, th, td {border: 1px solid black;}
+            .header {
+                display: flex;
+                justify-content: center;
+            }
+            p {
+                padding-left: 5%;
+                padding-right: 20%;
+            }
+            .flexSkills img {
+                width: 20%;
+            }
+
+            .flexSkills {
+                display: flex;
+                
+            }
+            
+            .aside {
+                background-color: #263ebb;
+                color: #ffffff;
+                border-radius: 10%;
+                flex-basis: 20% ;
+                padding-left: 1%;
+
+            }
+            .aside h2 {
+                color: #a13030;
+                
+            }
+
+            .flex2 {
+                display: flex;
+                padding-left: 5%;
+                padding-right: 5%;
+                
+            }
+            .skip {
+            background-color: yellow;
+            padding: 5px;
+            border: 1px solid #000000;
+            text-decoration: none; /*Removes underline from link*/
+            position:absolute; /*position element relative to top left of viewport */
+            top: 10px;
+            left: -999px; /*push the putton off the left side. The -999 is a web dev convetnion for pushing stuff off of pages*/
+        }
+            .skip:focus {
+            left: 10px; /*This brings back element when they tab to it*/
+
+        }
+        </style>
+    </head>
+    <body>
+        <a href="#contentHere" class="skip" tabindex="1">Skip to content </a> <!--Bookmark links jump you around the page-->
+        <nav>
+            <a href="index.html">Home</a>
+            <span> | </span>
+            <a href="Skills.html">Skills</a>
+            <span> | </span>
+            <a href = "contact.html">Contact</a>
+        </nav>
+        <h1 class="header">Technical Skills</h1>
+        <p id="contentHere">The following are some important skills that I have. I also included some of the skills that are more for my well being and entertainment rather then stricly technical. This does not mean that these skills are not useful but I just do not consider them very technical. </p>
+        <br>
+        <div class="flex2">
+            <div>
+                <div class="flexSkills">
+                    <div>
+                       <img src="../images/html5.svg" alt = "html5 Logo">
+                       <br>
+                       <span>HTML5</span>
+                   </div>          
+                   <div>
+                       <img src="../images/css3-alt.svg" alt = "CSSLogo">
+                       <br>
+                        <span>CSS</span>
+                   </div>
+                   <div>
+                       <img src="../images/python.svg" alt = "Python Logo">
+                       <br> 
+                       <span>Python</span>
+                   </div>
+                   <div>
+                       <img class = "pepimg" src="../images/people-group-solid.svg" alt = "Leadership Logo">
+                       <br> 
+                       <span>Leadership</span>
+                   </div>
+                   <div>
+                       <img src="../images/table-solid.svg" alt = "Table Logo">
+                       <br> 
+                       <span>Microsoft 365</span>
+                   </div>
+               </div>
+
+            </div>
+
+            <div class="aside">
+                <aside>
+                    <h2>Other Skills</h2>
+                    <p>Cooking</p>
+                    <p>Bike Riding</p>
+                    <p>Snowboarding</p>
+                    <p>Reading</p>
+                    <p>Writing</p>
+                </aside>
+            </div>
+        </div>
+    </body>
+</html>
