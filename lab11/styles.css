@@ -15,11 +15,11 @@ text{color:#060605 ;}
 a {color:#ff9b61;}
 h1, h2 {color :#2a2f78;}
 nav {
-    background-color: #2b9fed;
+    background-color: #EDF7FD;
     padding: 10px;
     margin-bottom: 30px;
     }
-nav a {color:#004001;}
+nav a {color:#583518;}
 nav a:hover {background-color:#a61941;}
 
 @media only screen and (max-width: 600px) {
