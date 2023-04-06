@@ -28,3 +28,17 @@ nav a:hover {background-color:#a61941;}
     padding: 1%;} 
     nav span {display: none;}
 }
+.skip {
+    background-color: #f9f966;
+    color:#000000;
+    padding: 5px;
+    border: 1px solid #000000;
+    text-decoration: none; /*Removes underline from link*/
+    position:absolute; /*position element relative to top left of viewport */
+    top: 10px;
+    left: -999px; /*push the putton off the left side. The -999 is a web dev convetnion for pushing stuff off of pages*/
+}
+    .skip:focus {
+    left: 10px; /*This brings back element when they tab to it*/
+
+}
