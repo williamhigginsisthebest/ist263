@@ -5,12 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Quick Tips</title>
+    <link rel="stylesheet" href = "styles.css">
+
+
+    <style>
+    .topbar {
+        display: flex;
+        border-bottom: 2px solid #000000;
+        background-color: #1d1d1d;
+        margin: 0px;
+    }
+    .TitleHeader {
+        text-align: center;
+        background-color: #8b8b8b;
+        margin-top: 0px;
+        border: 2px solid #000000;
+    } 
+
+    #CrabLogo {
+        width: 20px;
+    }
+    .sidebarActive {
+        display: none;
+        background-color: lightblue;
+        position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1} /*Took this from https://www.w3schools.com/w3css/4/w3.css */
+    }
+
+
+
+    .row1, .row2 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        
+    }
+    .teaserImage {
+        min-width: 200px;
+        max-width: 400px;
+        
+    }
+    /*Why wont these articles start at the same height???*/
+    .teaserArticle {
+
+        justify-content: center;
+        padding: 16px;
+        display: inline-block;
+        background-color: gray;
+        border: 2px solid #000000;
+        border-radius: 10%;
+        margin: 5px;
+        width: 400px;
+        flex-basis: 150px;
+        flex-grow: 1;
+    }
+
+
+
+    </style>
+
+    <script>
+        function openSideNavBar () {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("OpenSideBar").style.width = "25%";
+            document.getElementById("OpenSideBar").style.display = "block";
+            document.getElementById("openNav").style.display = "none";
+        }
+
+        function closeSideNavBar () {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("OpenSideBar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
 </head>
 <body>
 
-    <nav class = "sidenav"> <!--Will be converting this into interactive/collapsable sidebar menu-->
+    <nav class = "sidebarActive" id="OpenSideBar"> <!--Will be converting this into interactive/collapsable sidebar menu-->
+        <button id="closeNavBar" onclick="closeSideNavBar ();">Close</button>
         <a href="index.html" title="Link to Homepage">Home</a>
-
         <div class="dropdownNav">
             <button type="button" class="collapsible">Everyday Tips</button> <!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
@@ -26,16 +99,19 @@
                     <a href="software.html#EverythingArticle">Everything File Searcher</a>
                 </div>
         </div>
-
     </nav>
+
+    <div id="main">
     <div class = "topbar">
-        <span class = "menuicon">&#127828;</span> <!--This will be replaced with a CSS configuration-->
-        <img src="../images/MyAICrabLogo.svg" alt="Crab Logo"> <!--TODO: Decide if I should keep. This will be smaller in the final part-->
+        <div class = "menuicon">
+            <button id="openNav" class="navButton" onclick="openSideNavBar ();">&#9776;</button> <!--This will be replaced with a CSS configuration-->
+        </div>
+        <div>
+        <img src="../images/MyAICrabLogo.svg" alt="Crab Logo" id="CrabLogo"> <!--TODO: Decide if I should keep. This will be smaller in the final part-->
+        </div>
     </div>
 
-
-
-    <div class="Title Header">
+    <div class="TitleHeader">
         <h1>Quick Tip Wiki</h1> <!--Note to Self:Should I change website title?-->
     </div>
     <div class="WebsitePurpose">
@@ -45,27 +121,37 @@
     <hr>
     <div class="Row1">
         <div class="teaserArticle">
-            <img src="../images/GarbageDisposal.png" alt="Garbage disposal">
+            <img src="../images/GarbageDisposal.png" alt="Garbage disposal" class="teaserImage">
+            <br>
             <a href="everyday.html#GarbageDisposalArticle">Garbage disposal tips</a>
-            <p>Have you ever been using your garbage disposal and have it randomly stop working? You flick the switch and nothing happens but you are sure that it didn’t break and that it is still has power? This tip might help you!</p>
+            <p class="teaserText">Have you ever been using your garbage disposal and have it randomly stop working? You flick the switch and nothing happens but you are sure that it didn’t break and that it is still has power? This tip might help you!</p>
         </div>
         <div class="teaserArticle">
-            <img src="../images/VSCodeAltShiftDown.png" alt="VS code window">
+            <img src="../images/VSCodeAltShiftDown.png" alt="VS code window" class="teaserImage">
+            <br>
             <a href="software.html#VSCodeArticle">VS code tips</a>
-            <p>Do you use VS code for working on websites or other coding projects? If you do, you might be interested in some of the tips I have written down here!</p>
+            <p class="teaserText">Do you use VS code for working on websites or other coding projects? If you do, you might be interested in some of the tips I have written down here!</p>
         </div>
     </div>
+
+    <br>
+    <br>
+
+
     <div class="Row2">
         <div class="teaserArticle">
-            <img src="../images/SaltedCar.png" alt="Car with bad salt damage">
+            <img src="../images/SaltedCar.png" alt="Car with bad salt damage" class="teaserImage">
+            <br>
             <a href="everyday.html#ColdWeatherCarTipsArticle">Cold weather car tips</a>
-            <p>New to owning a car in a snowy place or just owning a car at all? Here are some useful tips that might help save you a lot of headache down the road!</p>
+            <p class="teaserText">New to owning a car in a snowy place or just owning a car at all? Here are some useful tips that might help save you a lot of headache down the road!</p>
         </div>
         <div class="teaserArticle">
-            <img src="../images/7zipFastSpeedIcon.png" alt="7zip Logo">
+            <img src="../images/7zipFastSpeedIcon.png" alt="7zip Logo" class="teaserImage">
+            <br>
             <a href="software.html#7zipArticle">File Compression tips</a>
-            <p>Having trouble with .zip or .7z files? Want to store large documents on your computer for the future but hate how slow it takes to compress them? If so, some of the tips here might interest you!</p>
+            <p class="teaserText">Having trouble with .zip or .7z files? Want to store large documents on your computer for the future but hate how slow it takes to compress them? If so, some of the tips here might interest you!</p>
         </div>  
+    </div>
     </div>
 </body>
 </html>
