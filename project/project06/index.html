@@ -53,18 +53,39 @@
         font-size: 15px;
     }
     .active, .collapsible:hover{
-        background-color: #f4ffce;
+        background-color: #475a00;
     }
     .navContent {
         padding: 0 18px;
         display: none;
         overflow: hidden;
-        background-color: #f1f1f1;
+        background-color: #787878;
         transition: max-height 0.2s ease-out;
     }
     .navContent a {
-        color: red;
+        display: block;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid #000000;
+        color: #b9b9b9;
     }
+    .navContent a:visited{
+        color:#b9b9b9;
+    }
+    .navContent a:hover {
+        color:#fbff00;
+    }
+
+    #closeNavBar {
+        float: right;
+    }
+
+    #HomePage {
+        text-align: center;
+        padding:5px;
+        color: #475a00;
+    }
+
 
     .WebsitePurpose {
         border-bottom: 2px solid #000000;
@@ -90,25 +111,29 @@
     .teaserArticle1 {
         grid-column: 1;
         grid-row: 1;
-        background-color: #916464;
     }
 
     .teaserArticle2 {
         grid-column: 2;
         grid-row: 1;
-        background-color: #647491;
     }
 
     .teaserArticle3 {
         grid-column: 1;
         grid-row: 2;
-        background-color: #916464;
     }
 
     .teaserArticle4 {
         grid-column: 2;
         grid-row: 2;
+    }
+
+    .softwareTipsColor{
         background-color: #647491;
+    }
+
+    .lifeTipsColor{
+        background-color: #916464;
     }
 
     .teaserImage {
@@ -132,28 +157,24 @@
 
     </style>
 
-    <script>
-
-
-    </script>
 
 </head>
 <body>
 
     <nav class = "sidebarActive" id="OpenSideBar"> <!--Will be converting this into interactive/collapsable sidebar menu-->
-        <button id="closeNavBar" onclick="closeSideNavBar ();">Close</button>
-        <a href="index.html" title="Link to Homepage">Home</a>
+        <button id="closeNavBar" onclick="closeSideNavBar ();">&#10006;</button>
+        <button href="index.html" title="Link to Homepage" id="HomePage">Home</button>
         <div class="dropdownNav">
             <button type="button" class="collapsible">Everyday Tips</button> <!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
-                    <a href="everyday.html#GarbageDisposalArticle">Garbage Disposal Tips</a>
-                    <a href="everyday.html#ColdWeatherCarTipsArticle">Cold Weather Car Tips</a>
+                    <a href="everyday.html#GarbageDisposalArticle" class="lifeTipsColor">Garbage Disposal Tips</a>
+                    <a href="everyday.html#ColdWeatherCarTipsArticle" class="lifeTipsColor">Cold Weather Car Tips</a>
                 </div>
             <button type="button" class="collapsible">Software Tips</button><!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
-                    <a href="software.html#VSCodeArticle">VS Code Tips</a>
-                    <a href="software.html#7zipArticle">7zip</a>
-                    <a href="software.html#EverythingArticle">Everything File Searcher</a>
+                    <a href="software.html#VSCodeArticle" class="softwareTipsColor">VS Code Tips</a>
+                    <a href="software.html#7zipArticle" class="softwareTipsColor">7zip</a>
+                    <a href="software.html#EverythingArticle" class="softwareTipsColor">Everything File Searcher</a>
                 </div>
             </div>
         </div>
@@ -178,25 +199,25 @@
     </div>
 
     <div class="gridWrapper">
-        <div class="teaserArticle teaserArticle1">
+        <div class="teaserArticle teaserArticle1 lifeTipsColor">
             <img src="../images/GarbageDisposal_DownSized.png" alt="Garbage disposal" class="teaserImage">
             <br>
             <a href="everyday.html#GarbageDisposalArticle">Garbage disposal tips</a>
             <p class="teaserText">Have you ever been using your garbage disposal and have it randomly stop working? You flick the switch and nothing happens but you are sure that it didn’t break and that it is still has power? This tip might help you!</p>
         </div>
-        <div class="teaserArticle teaserArticle2">
+        <div class="teaserArticle teaserArticle2 softwareTipsColor">
             <img src="../images/VSCodeAltShiftDown.png" alt="VS code window" class="teaserImage">
             <br>
             <a href="software.html#VSCodeArticle">VS code tips</a>
             <p class="teaserText">Do you use VS code for working on websites or other coding projects? If you do, you might be interested in some of the tips I have written down here!</p>
         </div>
-        <div class="teaserArticle teaserArticle3">
+        <div class="teaserArticle teaserArticle3 lifeTipsColor">
             <img src="../images/SaltedCar_DownSized.png" alt="Car with bad salt damage" class="teaserImage">
             <br>
             <a href="everyday.html#ColdWeatherCarTipsArticle">Cold weather car tips</a>
             <p class="teaserText">New to owning a car in a snowy place or just owning a car at all? Here are some useful tips that might help save you a lot of headache down the road!</p>
         </div>
-        <div class="teaserArticle teaserArticle4" >
+        <div class="teaserArticle teaserArticle4 softwareTipsColor" >
             <img src="../images/7zipFastSpeedIcon.png" alt="7zip Logo" class="teaserImage">
             <br>
             <a href="software.html#7zipArticle">File Compression tips</a>
