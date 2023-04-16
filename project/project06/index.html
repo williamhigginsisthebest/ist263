@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Quick Tips</title>
     <link rel="stylesheet" href = "styles.css">
-
+    <link rel="script" href="main_scripts.js">
+    <script type="text/javascript" src="main_scripts.js" defer></script> <!--defer makes this load once page has finished loading. Important for DOM reliant scripts, which my dropdown menu script is-->
 
     <style>
     body {
@@ -38,19 +39,31 @@
     .sidebarActive{
         position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1} /*Took this from https://www.w3schools.com/w3css/4/w3.css */
     }
+
+    /*This section controls the collapsible nav menu */
     .collapsible {
-        background-color: #bebebe;
-        color: #000000;
+        background-color: #787878;
+        color: #ffffff;
         cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
     }
     .active, .collapsible:hover{
-        background-color: #e8ff9b;
+        background-color: #f4ffce;
     }
     .navContent {
+        padding: 0 18px;
         display: none;
         overflow: hidden;
         background-color: #f1f1f1;
         transition: max-height 0.2s ease-out;
+    }
+    .navContent a {
+        color: red;
     }
 
     .WebsitePurpose {
@@ -62,7 +75,6 @@
     .teaserArticle {
         justify-content: center;
         padding: 16px;
-        background-color: gray;
         border: 2px solid #000000;
         border-radius: 10%;
 
@@ -78,21 +90,25 @@
     .teaserArticle1 {
         grid-column: 1;
         grid-row: 1;
+        background-color: #916464;
     }
 
     .teaserArticle2 {
         grid-column: 2;
         grid-row: 1;
+        background-color: #647491;
     }
 
     .teaserArticle3 {
         grid-column: 1;
         grid-row: 2;
+        background-color: #916464;
     }
 
     .teaserArticle4 {
         grid-column: 2;
         grid-row: 2;
+        background-color: #647491;
     }
 
     .teaserImage {
@@ -117,34 +133,8 @@
     </style>
 
     <script>
-        function openSideNavBar () {
-            document.getElementById("main").style.marginLeft = "20%";
-            document.getElementById("OpenSideBar").style.width = "20%";
-            document.getElementById("OpenSideBar").style.display = "inline-block";
-            document.getElementById("openNav").style.display = "none";
-        }
 
-        function closeSideNavBar () {
-            document.getElementById("main").style.marginLeft = "0%";
-            document.getElementById("OpenSideBar").style.display = "none";
-            document.getElementById("openNav").style.display = "inline-block";
-        }
-        
-        //This is for dropdown in nav. IT IS NOT WORKING FOR SOME REASON :(
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
 
-        for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight){
-            content.style.maxHeight = null;
-            } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-        }
     </script>
 
 </head>
@@ -159,14 +149,13 @@
                     <a href="everyday.html#GarbageDisposalArticle">Garbage Disposal Tips</a>
                     <a href="everyday.html#ColdWeatherCarTipsArticle">Cold Weather Car Tips</a>
                 </div>
-        </div>
-
             <button type="button" class="collapsible">Software Tips</button><!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
                     <a href="software.html#VSCodeArticle">VS Code Tips</a>
                     <a href="software.html#7zipArticle">7zip</a>
                     <a href="software.html#EverythingArticle">Everything File Searcher</a>
-
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -215,5 +204,8 @@
         </div>  
     </div>
     </div>
+
+
+
 </body>
 </html>
