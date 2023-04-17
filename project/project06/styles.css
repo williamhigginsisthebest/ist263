@@ -1,0 +1,71 @@
+/*This section controls the collapsible nav menu */
+.sidebarActive {
+    display: none;
+    background-color: lightblue;  
+    position:relative; top:0px;   
+    float: left; 
+}
+
+.sidebarActive{
+    position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1} /*Took this from https://www.w3schools.com/w3css/4/w3.css */
+}
+
+.collapsible {
+    background-color: #787878;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover{
+    background-color: #475a00;
+}
+
+.navContent {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #787878;
+    transition: max-height 0.2s ease-out;
+}
+
+.navContent a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #000000;
+    color: #b9b9b9;
+}
+
+.navContent a:visited{
+    color:#b9b9b9;
+}
+
+.navContent a:hover {
+    color:#fbff00;
+}
+
+#closeNavBar {
+    float: right;
+}
+
+#HomePage {
+    text-align: center;
+    padding:5px;
+    color: #475a00;
+}
+
+
+/*This is the color "pallete" for the two diffrent types of articles */
+.softwareTipsColor{
+    background-color: #455263;
+}
+
+.lifeTipsColor{
+    background-color: #694949;
+}

@@ -1,4 +1,5 @@
- //This only works if it is last. Something about having it need to load the whole dom in first or somthing
+ //This only works if it is last, due to it being DOM reliant
+ //For collapsible section in sidebar nav
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
@@ -15,6 +16,7 @@ coll[i].addEventListener("click", function() {
 } 
 
 
+//This is for the sidebar and makeing it appear
 function openSideNavBar () {
     document.getElementById("main").style.marginLeft = "20%";
     document.getElementById("OpenSideBar").style.width = "20%";
@@ -28,4 +30,3 @@ function closeSideNavBar () {
     document.getElementById("openNav").style.display = "inline-block";
 }
 
-//This is for dropdown in nav. IT IS NOT WORKING FOR SOME REASON :(
