@@ -95,8 +95,11 @@ float: left;
 
 #HomePage {
     text-align: center;
-    padding:5px;
+    padding:2px;
     color: #475a00;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    position: relative; top: 3px;
 }
 .softwareTipsColor{
     background-color: #455263;
@@ -168,9 +171,7 @@ float: left;
 
     <nav class = "sidebarActive" id="OpenSideBar"> <!--Will be converting this into interactive/collapsable sidebar menu-->
         <button id="closeNavBar" onclick="closeSideNavBar ();">&#10006;</button>
-        <a href="index.html">
-            <button title="Link to Homepage" id="HomePage">Home</button>
-        </a>
+        <a href="index.html" id="HomePage">Home</a>
         <div class="dropdownNav">
             <button type="button" class="collapsible">Everyday Tips</button> <!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
