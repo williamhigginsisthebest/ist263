@@ -1,4 +1,7 @@
 /*This section controls the collapsible nav menu */
+
+/* TEST to see if this code needs to be embedded into index page
+
 .sidebarActive {
     display: none;
     background-color: lightblue;  
@@ -6,9 +9,12 @@
     float: left; 
 }
 
+*/
+/*Took this from https://www.w3schools.com/w3css/4/w3.css */
+/*TEST to see if this code needs to be embedded into index page
 .sidebarActive{
-    position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1} /*Took this from https://www.w3schools.com/w3css/4/w3.css */
-}
+    position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1} 
+    }
 
 .collapsible {
     background-color: #787878;
@@ -59,7 +65,7 @@
     padding:5px;
     color: #475a00;
 }
-
+*/
 
 /*This is the color "pallete" for the two diffrent types of articles */
 .softwareTipsColor{
