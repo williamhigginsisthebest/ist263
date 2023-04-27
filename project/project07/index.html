@@ -28,9 +28,12 @@
 <body>
 
     <nav class = "sidebarActive" id="OpenSideBar"> <!--Will be converting this into interactive/collapsable sidebar menu-->
-        <button id="closeNavBar" onclick="closeSideNavBar ();">&#10006;</button>
-        <a href="index.html" id="HomePage">Home</a>
         <div class="dropdownNav">
+            <div>
+                <a href="index.html" id="HomePage">Home</a>
+                <button id="closeNavBar" onclick="closeSideNavBar ();">&#10006;</button>
+            </div>
+
             <button type="button" class="collapsible">Everyday Tips</button> <!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
                     <a href="everyday.html#GarbageDisposalArticle" class="lifeTipsColor">Garbage Disposal Tips</a>

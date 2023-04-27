@@ -2,6 +2,12 @@ body {
     background-color: #e7e7e7;
 }
 
+#main {
+    z-index: 1;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .topbar {
     display: flex;
     border-bottom: 2px solid #000000;
@@ -28,9 +34,9 @@ body {
 /*This section controls the collapsible nav menu */
 .sidebarActive {
 display: none;
-background-color: lightblue;  
 position:relative; top:0px;   
 float: left; 
+z-index: 999;
 }
 
 .sidebarActive{
@@ -86,15 +92,22 @@ color:#fbff00;
 
 #closeNavBar {
 float: right;
+
 }
 
+
 #HomePage {
-text-align: center;
-padding:2px;
-color: #475a00;
-background-color: #ffffff;
-border: 1px solid #000000;
-position: relative; top: 3px;
+background-color: #787878;
+color: #ffffff;
+cursor: pointer;
+padding-left: 18px;
+padding-bottom: 18px;
+padding-right: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
 }
 
 /*This is the color "pallete" for the two diffrent types of articles */

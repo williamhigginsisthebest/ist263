@@ -18,15 +18,30 @@ coll[i].addEventListener("click", function() {
 
 //This is for the sidebar and makeing it appear
 function openSideNavBar () {
-    document.getElementById("main").style.marginLeft = "20%";
-    document.getElementById("OpenSideBar").style.width = "20%";
-    document.getElementById("OpenSideBar").style.display = "inline-block";
-    document.getElementById("openNav").style.display = "none";
+    if (document.documentElement.clientWidth > 910) {
+        document.getElementById("main").style.marginLeft = "20%";
+        document.getElementById("OpenSideBar").style.width = "20%";
+        document.getElementById("OpenSideBar").style.display = "inline-block";
+        document.getElementById("openNav").style.display = "none";
+    } else {//This is for mobile site
+        document.getElementById("OpenSideBar").style.display = "inline-block";
+        document.getElementById("OpenSideBar").style.width = "100%";
+        document.getElementById("OpenSideBar").style.position = "absolute";
+        document.getElementById("main").style.filter = "blur(10px)";
+
+
+
+        document.getElementById("openNav").style.display = "none";
+    }
 }
 
 function closeSideNavBar () {
     document.getElementById("main").style.marginLeft = "0%";
     document.getElementById("OpenSideBar").style.display = "none";
     document.getElementById("openNav").style.display = "inline-block";
+    document.getElementById("main").style.filter = "blur(0px)";
 }
+
+
+
 
