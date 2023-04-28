@@ -1,11 +1,12 @@
 body {
     background-color: #e7e7e7;
+    margin: 10px;
+    margin-top: 0px;
+
 }
 
 #main {
     z-index: 1;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 .topbar {
@@ -16,8 +17,7 @@ body {
 }
 .TitleHeader {
     text-align: center;
-    background-color: #8b8b8b;
-    margin-top: 0px;
+    background-color: #475a00;
     border: 2px solid #000000;
 } 
 
@@ -29,6 +29,7 @@ body {
 .WebsitePurpose {
     border-bottom: 2px solid #000000;
     margin-bottom: 8px;
+    padding-left: 15px;
 }
 
 /*This section controls the collapsible nav menu */
@@ -67,7 +68,6 @@ background-color: #475a00;
 }
 
 .navContent {
-padding: 0 18px;
 display: none;
 overflow: hidden;
 background-color: #787878;
@@ -91,23 +91,39 @@ color:#fbff00;
 }
 
 #closeNavBar {
-float: right;
-
+    font-size: 120%;
+    margin-top: 5px;
 }
 
+#openNav {
+    font-size: 150%;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: left;
+}
+
+#HomePageWrapper {
+    background-color: #787878;
+    color: #ffffff;
+    padding-left: 18px;
+    padding-bottom: 15px;
+    padding-right: 5px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 #HomePage {
-background-color: #787878;
-color: #ffffff;
-cursor: pointer;
-padding-left: 18px;
-padding-bottom: 18px;
-padding-right: 18px;
-width: 100%;
-border: none;
-text-align: left;
-outline: none;
-font-size: 15px;
+    position: relative; 
+    top: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding-top: 3px;
 }
 
 /*This is the color "pallete" for the two diffrent types of articles */
@@ -122,7 +138,9 @@ background-color: #694949;
 
 /*This section changes affects article layout and more*/
 .teaserArticle {
-    padding: 16px;
+    padding: 24px;
+    padding-top: 16px;
+    padding-bottom: 6px;
     border: 2px solid #000000;
     border-radius: 10%;
     color: #FFFFFF;
@@ -130,6 +148,10 @@ background-color: #694949;
 
 .teaserArticle a {
     color: #FBFF00;
+    display: block;
+    text-align: center;
+    padding-bottom: 16px;
+    font-size: 18px;
 }
 
 .gridWrapper {
@@ -160,10 +182,13 @@ background-color: #694949;
 }
 
 .teaserImage {
+    height: 64%;
     min-width: 200px;
     max-width: 400px;
-    margin: 5px;
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 910px) {
@@ -171,4 +196,30 @@ background-color: #694949;
     display: flex;
     flex-wrap: wrap;
     }
+    #closeNavBar {
+        margin-right: 20px;
+        font-size: 150%;
+    }
+    .sidebarActive {
+        font-size: 150%;
+    }
+    #HomePageWrapper {
+        padding-top: 15px;
+        width: 93.7%;
+    }
+    #HomePage {
+        font-size: 250%;
+    }
+
+    .collapsible {
+        font-size: 130%;
+        width: 97%;
+        }
+    .navContent {
+        width: 97%;
+    }
+
 }
+
+
+

@@ -27,13 +27,12 @@
 </head>
 <body>
 
-    <nav class = "sidebarActive" id="OpenSideBar"> <!--Will be converting this into interactive/collapsable sidebar menu-->
+    <nav class = "sidebarActive" id="OpenSideBar"> 
         <div class="dropdownNav">
-            <div>
+            <div id = "HomePageWrapper">
                 <a href="index.html" id="HomePage">Home</a>
                 <button id="closeNavBar" onclick="closeSideNavBar ();">&#10006;</button>
             </div>
-
             <button type="button" class="collapsible">Everyday Tips</button> <!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
                     <a href="everyday.html#GarbageDisposalArticle" class="lifeTipsColor">Garbage Disposal Tips</a>
@@ -49,17 +48,15 @@
     </nav>
 
     <div id="main">
-    <div class = "topbar">
-        <div class = "menuicon">
-            <button id="openNav" class="navButton" onclick="openSideNavBar ();">&#9776;</button> <!--This will be replaced with a CSS configuration-->
-        </div>
-        <div>
-        <img src="../images/dancin-crab-downsized.png" alt="Crab Logo" id="CrabLogo"> <!--TODO: Decide if I should keep. This will be smaller in the final part-->
-        </div>
-    </div>
+
 
     <div class="TitleHeader">
-        <h1>Quick Tip Wiki</h1> <!--Note to Self:Should I change website title?-->
+        <div>
+            <button id="openNav" class="navButton" onclick="openSideNavBar ();">&#9776;</button> 
+        </div>
+        <div>
+            <h1>Quick Tip Wiki</h1> <!--Note to Self:Should I change website title?-->
+        </div>
     </div>
     <div class="WebsitePurpose">
         <h3>Purpose of Website</h3>
@@ -68,26 +65,22 @@
 
     <div class="gridWrapper">
         <div class="teaserArticle teaserArticle1 lifeTipsColor">
-            <img src="../images/GarbageDisposal_DownSized.png" alt="Garbage disposal" class="teaserImage">
-            <br>
+            <img src="../images/GarbageDisposal_HIEGHTADUSJTED.jpg" alt="Garbage disposal" class="teaserImage">
             <a href="everyday.html#GarbageDisposalArticle">Garbage disposal tips</a>
             <p class="teaserText">Have you ever been using your garbage disposal and have it randomly stop working? You flick the switch and nothing happens but you are sure that it didn’t break and that it is still has power? This tip might help you!</p>
         </div>
         <div class="teaserArticle teaserArticle2 softwareTipsColor">
-            <img src="../images/VSCodeAltShiftDown.png" alt="VS code window" class="teaserImage">
-            <br>
+            <img src="../images/VSCodeAltShiftDown_HEIGHTADUSTED.jpg" alt="VS code window" class="teaserImage">
             <a href="software.html#VSCodeArticle">VS code tips</a>
             <p class="teaserText">Do you use VS code for working on websites or other coding projects? If you do, you might be interested in some of the tips I have written down here!</p>
         </div>
         <div class="teaserArticle teaserArticle3 lifeTipsColor">
-            <img src="../images/SaltedCar_DownSized.png" alt="Car with bad salt damage" class="teaserImage">
-            <br>
+            <img src="../images/SaltedCar_HEIGHTADJUSTED.jpg" alt="Car with bad salt damage" class="teaserImage">
             <a href="everyday.html#ColdWeatherCarTipsArticle">Cold weather car tips</a>
             <p class="teaserText">New to owning a car in a snowy place or just owning a car at all? Here are some useful tips that might help save you a lot of headache down the road!</p>
         </div>
         <div class="teaserArticle teaserArticle4 softwareTipsColor" >
-            <img src="../images/7zipFastSpeedIcon.png" alt="7zip Logo" class="teaserImage">
-            <br>
+            <img src="../images/7zipFastSpeedIcon_HEIGHTADJUSTED.png" alt="7zip Logo" class="teaserImage">
             <a href="software.html#7zipArticle">File Compression tips</a>
             <p class="teaserText">Having trouble with .zip or .7z files? Want to store large documents on your computer for the future but hate how slow it takes to compress them? If so, some of the tips here might interest you!</p>
         </div>  
