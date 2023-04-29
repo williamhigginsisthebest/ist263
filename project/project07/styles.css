@@ -223,3 +223,14 @@ background-color: #694949;
 
 
 
+/*Everyday and software css*/
+
+.mainArticle {
+    display: flex;
+    flex: wrap;
+    border-bottom: solid 2px #000000;
+}
+.mainArticle img {
+    max-width: 400px;
+    margin: 20px;
+}
