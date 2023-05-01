@@ -28,9 +28,6 @@ function openSideNavBar () {
         document.getElementById("OpenSideBar").style.width = "100%";
         document.getElementById("OpenSideBar").style.position = "absolute";
         document.getElementById("main").style.filter = "blur(10px)";
-
-
-
         document.getElementById("openNav").style.display = "none";
     }
 }

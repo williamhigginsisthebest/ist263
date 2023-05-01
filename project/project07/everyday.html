@@ -13,37 +13,39 @@
 </head>
 <body>
 
+    <a href="#contentHere" class="skip" tabindex="1">Skip to content </a> <!--Bookmark links jump you around the page-->
+
     <nav class = "sidebarActive" id="OpenSideBar"> 
         <div class="dropdownNav">
             <div id = "HomePageWrapper">
-                <a href="index.html" id="HomePage">Home</a>
+                <a href="index.html" id="HomePage" onclick="closeSideNavBar();"  tabindex="2">Home</a>
                 <button id="closeNavBar" onclick="closeSideNavBar ();">&#10006;</button>
             </div>
-            <button type="button" class="collapsible">Everyday Tips</button> <!--Want have a link to top of page too somehow-->
+            <button type="button" class="collapsible" >Everyday Tips</button> <!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
-                    <a href="everyday.html#GarbageDisposalArticle" class="lifeTipsColor">Garbage Disposal Tips</a>
-                    <a href="everyday.html#ColdWeatherCarTipsArticle" class="lifeTipsColor">Cold Weather Car Tips</a>
+                    <a href="everyday.html#GarbageDisposalArticle" class="lifeTipsColor" onclick="closeSideNavBar();" tabindex="3">Garbage Disposal Tips</a>
+                    <a href="everyday.html#ColdWeatherCarTipsArticle" class="lifeTipsColor" onclick="closeSideNavBar();"  tabindex="4">Cold Weather Car Tips</a>
                 </div>
-            <button type="button" class="collapsible">Software Tips</button><!--Want have a link to top of page too somehow-->
+            <button type="button" class="collapsible" tabindex="4">Software Tips</button><!--Want have a link to top of page too somehow-->
                 <div class="navContent"> <!--This will need CSS and JS to work properly. Example at https://www.w3schools.com/howto/howto_js_collapsible.asp-->
-                    <a href="software.html#VSCodeArticle" class="softwareTipsColor">VS Code Tips</a>
-                    <a href="software.html#7zipArticle" class="softwareTipsColor">7zip</a>
-                    <a href="software.html#EverythingArticle" class="softwareTipsColor">Everything File Searcher</a>
+                    <a href="software.html#VSCodeArticle" class="softwareTipsColor" onclick="closeSideNavBar();"  tabindex="5">VS Code Tips</a>
+                    <a href="software.html#7zipArticle" class="softwareTipsColor" onclick="closeSideNavBar();"  tabindex="6">7zip</a>
+                    <a href="software.html#EverythingArticle" class="softwareTipsColor" onclick="closeSideNavBar();"  tabindex="7">Everything File Searcher</a>
                 </div>
         </div>
     </nav>
 
 <div id="main">
-    <div class="TitleHeader">
+    <div class="TitleHeader lifeTipsColor TitleHeaderArticles">
         <div>
-            <button id="openNav" class="navButton" onclick="openSideNavBar ();">&#9776;</button> 
+            <button id="openNav" class="navButton" onclick="openSideNavBar ();" focusin="openSideNavBar">&#9776;</button> 
         </div>
         <div>
             <h1>Everyday Tips</h1> <!--Note to Self:Should I change website title?-->
         </div>
     </div>
 
-    <section class="mainArticle">
+    <section class="mainArticle" id="contentHere" tabindex="5">
         <div>
             <img src="../images/GarbageDisposal_HIEGHTADUSJTED.jpg" alt="Garbage disposal">
         </div>
@@ -53,14 +55,14 @@
         </div>
     </section>
 
-    <section class="mainArticle">
+    <section class="mainArticle" tabindex="6">
         <div>
             <img src="../images/SaltedCar_HEIGHTADJUSTED.jpg" alt="Car with bad salt damage">
         </div>
         <div>
             <h2 id="ColdWeatherCarTipsArticle">Cold Weather Car Tips</h2>
             <p>When living in a snowy place that uses salt for the roads, make sure that you go to a car wash every once and a while (and select the undercarriage wash option) in order to clear off some of the salt build up on your car. This will help prevent the car from rusting from all the salt water that is sitting on your car. </p>
-            <p>Important note: If your car was originally from a hotter state, be careful when exiting a car wash in cold temperatures. The glass may break if it cools down too fast since the glass is not used to the temperature differences.</p>
+            <p><strong>Important note:</strong> If your car was originally from a hotter state, be careful when exiting a car wash in cold temperatures. The glass may break if it cools down too fast since the glass is not used to the temperature differences.</p>
         </div>
     </section>
 </div>

@@ -1,7 +1,25 @@
+/*Skip to content */
+.skip {
+    background-color: yellow;
+    padding: 5px;
+    border: 1px solid #000000;
+    text-decoration: none; /*Removes underline from link*/
+    position:absolute; /*position element relative to top left of viewport */
+    top: 10px;
+    left: -999px; /*push the putton off the left side. The -999 is a web dev convetnion for pushing stuff off of pages*/
+}
+.skip:focus {
+    left: 10px; /*This brings back element when they tab to it*/
+
+}
+
+
+/*Main body elements */
 body {
     background-color: #e7e7e7;
     margin: 10px;
     margin-top: 0px;
+    font-size: 1em;
 
 }
 
@@ -60,7 +78,7 @@ width: 100%;
 border: none;
 text-align: left;
 outline: none;
-font-size: 15px;
+font-size: 1.2em;
 }
 
 .active, .collapsible:hover{
@@ -80,6 +98,7 @@ text-align: center;
 padding: 5px;
 border: 1px solid #000000;
 color: #b9b9b9;
+font-size: 1.1em;
 }
 
 .navContent a:visited{
@@ -97,8 +116,8 @@ color:#fbff00;
 
 #openNav {
     font-size: 150%;
-    margin-left: 5px;
-    margin-top: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
     float: left;
 }
 
@@ -110,8 +129,8 @@ color:#fbff00;
     padding-right: 5px;
     border: none;
     text-align: left;
+    font-size: 1.5em;
     outline: none;
-    font-size: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -122,7 +141,7 @@ color:#fbff00;
     top: 5px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1em;
     padding-top: 3px;
 }
 
@@ -198,21 +217,21 @@ background-color: #694949;
     }
     #closeNavBar {
         margin-right: 20px;
-        font-size: 150%;
+        font-size: 1.2em;
     }
     .sidebarActive {
-        font-size: 150%;
+        font-size: 1.5em;
     }
     #HomePageWrapper {
         padding-top: 15px;
         width: 93.7%;
     }
     #HomePage {
-        font-size: 250%;
+        font-size: 1.5em;
     }
 
     .collapsible {
-        font-size: 130%;
+        font-size: 1.2em;
         width: 97%;
         }
     .navContent {
@@ -227,10 +246,34 @@ background-color: #694949;
 
 .mainArticle {
     display: flex;
-    flex: wrap;
+    flex-wrap: nowrap;
     border-bottom: solid 2px #000000;
+    margin: 15px;
+}
+.mainArticle p {
+    max-width: 700px;
+}
+.mainArticle h2 {
+    text-align: center;
 }
 .mainArticle img {
     max-width: 400px;
     margin: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.TitleHeaderArticles {
+    color: #ffffff;
+}
+@media only screen and (max-width: 850px) {
+    .mainArticle{
+        flex-wrap: wrap;
+    }
+    .mainArticle p {
+        max-width: 700px;
+    }
+    .mainArticle img {
+        max-width: 650px;
+    }
 }
