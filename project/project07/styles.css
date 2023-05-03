@@ -202,7 +202,7 @@ background-color: #694949;
 
 .teaserImage {
     height: 64%;
-    min-width: 200px;
+    min-width: 50px;
     max-width: 400px;
     display: block;
     margin-left: auto;
@@ -236,6 +236,9 @@ background-color: #694949;
         }
     .navContent {
         width: 97%;
+    }
+    .teaserImage {
+        max-height: 200px;
     }
 
 }
