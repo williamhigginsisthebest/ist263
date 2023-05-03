@@ -249,6 +249,7 @@ background-color: #694949;
 
 .mainArticle {
     display: flex;
+    justify-content: center;
     flex-wrap: nowrap;
     border-bottom: solid 2px #000000;
     margin: 15px;
@@ -277,6 +278,8 @@ background-color: #694949;
         max-width: 700px;
     }
     .mainArticle img {
-        max-width: 650px;
+        width: 100%;
+        height: auto;
+ 
     }
 }
